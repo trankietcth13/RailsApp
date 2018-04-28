@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JadeLinh Shop</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body id="store">
+  <div class="container-fluid">
+      <div id="banner">
+        <%= image_tag("logo.png", :class => "img_logo" ) %>
+        <%= @page_title || "The Best Of Chooses For You"%>
+      </div>
+      <div id="volumns">
+        <div id="side">
+          <a href="#">Home</a><br/>
+          <a href="#">FAQ</a><br/>
+          <a href="#">News</a><br/>
+          <a href="#">Contact</a><br/>
+        </div>
+
+        <div id="main">      
+          <%= yield %>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
